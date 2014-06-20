@@ -4,5 +4,6 @@ sorry, this repository is just getting underway.
 
 - how to build docker image 
 ```
-docker build  --no-cache --tag="debian-sheezy-sudo-ssh"  . 
+cd docker-context
+docker build --tag="${yourname}/${image name}[:tag name]"  . 
 ```

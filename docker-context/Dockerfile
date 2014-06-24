@@ -8,6 +8,10 @@ RUN echo root:password | chpasswd
 RUN apt-get install sudo openssh-server -y
 RUN mkdir -p /var/run/sshd
 #EXPOSE 22
+
+## setup rsyslog
+RUN apt-get install rsyslog -y
+
 CMD    ["/usr/sbin/sshd", "-D"]
 
 ## add new user

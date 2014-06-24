@@ -7,8 +7,8 @@ RUN echo root:password | chpasswd
 ## setup sshd
 RUN apt-get install sudo openssh-server -y
 RUN mkdir -p /var/run/sshd
-EXPOSE 22
-#CMD    ["/usr/sbin/sshd", "-D"]
+#EXPOSE 22
+CMD    ["/usr/sbin/sshd", "-D"]
 
 ## add new user
 # RUN useradd -d /home/hogehoge -m -s /bin/bash hogehoge

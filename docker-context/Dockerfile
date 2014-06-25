@@ -8,6 +8,7 @@ RUN echo root:password | chpasswd
 ## setup sshd
 RUN apt-get -q install sudo openssh-server -y
 RUN mkdir -p /var/run/sshd
+RUN mkdir -p /root/.ssh
 RUN /etc/init.d/ssh start
 EXPOSE 22
 
